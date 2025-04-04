@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/contact.css">
+    <script src="../Js/contact.js"></script>    
+    <!-- AbdulMateen - 60300569 -->
+</head>
+<body>
+    <header>
+        <nav>
+          <div class="nav-logo">
+            <a href="./index.html">
+          <img src="../images/logo.png" alt="Digitrove Marketing Logo">
+            </a>
+            <ul class="navbar">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="./Contact_Us.html">Contact Us</a></li>
+                <li><a href="./Subscribe.html">Subscribe</a></li>
+                <li><a href="./FAQ.html">FAQ</a></li>
+                <li><a href="./Login.html">Login</a></li>
+            </ul>
+            <div class="search-bar"> <!-- Added search bar -->
+              <input type="text" id="search" placeholder="Search...">
+              <button type="submit">Search 🔍</button>
+          </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-us">
+            <h1>Contact Us</h1>
+            <p>Feel free to reach out to us using the form below. You can also check our contact details and location.</p>
+
+            <!-- Company Contact Details -->
+            <div class="contact-details">
+                <h2>Our Contact Details:</h2>
+                <p><strong>Address:</strong> 123 Digitrove Street, Somewhere, Earth</p>
+                <p><strong>Phone:</strong> +123 456 7890</p>
+                <p><strong>Email:</strong> info@digitrove.com</p>
+                <p><strong>Working Hours:</strong> Mon-Fri: 9 AM - 6 PM</p>
+            </div>
+
+            <!-- Google Map Embeding -->
+            <div class="google-map">
+                <h2>Our Location:</h2>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.597852385991!2d-122.419415484679!3d37.7749299797586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808c0f6b8c6b%3A0x47ff2d5a149fa7d0!2s1600%20Howard%20St%2C%20San%20Francisco%2C%20CA%2094125%2C%20USA!5e0!3m2!1sen!2sus!4v1617029006194!5m2!1sen!2sus" 
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+
+            <!-- Contact Form -->
+            <form id="contactForm" action="https://sit.udst.edu.qa/processform.php" method="post" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    <div class="error-message" id="error-name"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    <div class="error-message" id="error-email"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    <div class="error-message" id="error-subject"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" placeholder="Your message here.." required></textarea>
+                    <div class="error-message" id="error-message"></div>
+                </div>
+
+                <!-- Contact Preference (Radio Buttons) -->
+                <div class="form-group">
+                    <b><label>Preferred Contact Method:</label></b>
+                    <div>
+                        <label for="phone">Phone Call</label>
+                        <input type="radio" id="phone" name="contact-preference" value="Phone Call">
+                    </div>
+                    <div>
+                        <label for="email-contact">Email</label>
+                        <input type="radio" id="email-contact" name="contact-preference" value="Email" checked>
+                    </div>
+                    <div>
+                        <label for="other">Other</label>
+                        <input type="radio" id="other" name="contact-preference" value="Other">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="submit-btn">Send Message</button>
+                    <button type="reset" class="reset-btn">Reset</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="container">
+              <div class="footer-content">
+                <div class="footer-left">
+                    <a href="./index.html">
+                    <img src="../images/logo.png" alt="Digitrove Marketing Logo" class="nav-logo"></a>
+                  <p>Your trusted partner in digital growth. We help businesses achieve their marketing goals with tailored, data-driven strategies.</p>
+                </div>
+          
+                <div class="footer-middle">
+                  <h4>Quick Links</h4>
+                  <ul>
+                    <li><a href="./services.html">Services</a></li>
+                    <li><a href="./index.html#testimonials">Testimonials</a></li>
+                    <li><a href="./Contact_Us.html">Contact</a></li>
+                  </ul>
+                </div>
+          
+                <div class="footer-right">
+                  <h4>Contact Us</h4>
+                  <p>Email: <a href="mailto:info@digitrove.com">info@digitrove.com</a></p>
+                  <p>Phone: (123) 456-7890</p>
+                  <div class="social-icons">
+                    <a href="#">Facebook</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">LinkedIn</a>
+                  </div>
+                </div>
+              </div>
+          
+              <div class="footer-bottom">
+                <p>&copy; 2025 Digitrove Marketing. All Rights Reserved.</p>
+              </div>
+            </div>
+          </footer>
+
+</body>
+</html>
