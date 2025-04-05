@@ -1,4 +1,3 @@
-// AbdulMateen - 60300569
 document.addEventListener("DOMContentLoaded", function() {
     const form = document.querySelector('.contact-form');  // Selecting form by class
     
