@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Birthday, My Love!</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #ffe6e6;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        #countdown {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        #note {
+            font-size: 1.5em;
+            color: #d14d72;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Countdown to Your Birthday, My Love!</h1>
+    <div id="countdown"></div>
+    <div id="note"></div>
+
+    <script>
+        const birthdayMonth = 7; // August (Month is 0-indexed: 0 = January, 7 = August)
+        const birthdayDay = 15; // Set your love's birthday day
+
+        const notes = [
+            "You are my sunshine, my only sunshine!",
+            "Every day with you is a gift.",
+            "You make my world brighter!",
+            "I love you more than words can express.",
+            "Happy Birthday, my heart!",
+            "Forever and always, you have my heart."
+        ];
+
+        function updateCountdown() {
+            const now = new Date();
+            let birthday = new Date(now.getFullYear(), birthdayMonth, birthdayDay);
+
+            // If birthday already passed this year, set to next year
+            if (now > birthday) {
+                birthday.setFullYear(now.getFullYear() + 1);
+            }
+
+            const diff = birthday - now;
+            
+            if (diff <= 0) {
+                document.getElementById('countdown').style.display = 'none';
+                const randomNote = notes[Math.floor(Math.random() * notes.length)];
+                document.getElementById('note').textContent = randomNote;
+            } else {
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+                document.getElementById('countdown').innerHTML = 
+                    `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+                setTimeout(updateCountdown, 1000);
+            }
+        }
+
+        updateCountdown();
+    </script>
+
+</body>
+</html>
